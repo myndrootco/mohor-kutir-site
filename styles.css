@@ -4,14 +4,19 @@
             --terracotta #A34E2A, --terracotta-deep #6F3419,
             --gold #B78B46, --line #D9C7A6
    Type: Grendel Bold (display headings) / IBM Plex Sans (body) /
-         IBM Plex Serif italic (editorial accents) / IBM Plex Mono
-         (labels, nav, UI chrome)
+         Forum (editorial accents, and the heading fallback until
+         Grendel is installed) / IBM Plex Mono (labels, nav, UI
+         chrome)
+
+   Forum is a single-weight, regular-only display serif — it has no
+   real italic, so browsers synthesize a slanted (oblique) version
+   wherever font-style:italic is used below.
 
    Grendel Bold is licensed separately and not yet installed —
    drop the licensed webfont files into web/fonts/ as:
      fonts/GrendelBold.woff2, fonts/GrendelBold.woff
    and headings will pick it up automatically. Until then, headings
-   render in the IBM Plex Serif fallback below.
+   render in the Forum fallback below.
    ============================================================ */
 
 @font-face{
@@ -36,8 +41,8 @@
   --line-soft:#E7DAC0;
   --shadow: 0 24px 60px -30px rgba(36,28,22,0.45);
 
-  --font-display:'Grendel Bold', 'IBM Plex Serif', Georgia, serif;
-  --font-serif:'IBM Plex Serif', Georgia, serif;
+  --font-display:'Grendel Bold', 'Forum', Georgia, serif;
+  --font-serif:'Forum', Georgia, serif;
   --font-body:'IBM Plex Sans', 'Segoe UI', sans-serif;
   --font-label:'IBM Plex Mono', 'SFMono-Regular', Menlo, monospace;
 }
